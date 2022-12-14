@@ -12,11 +12,6 @@
   margin-left: 400px;
 }
 
-#contenedor-1, #contenedor-2{
-  display: flex;
-  justify-content: flex-start;
-}
-
 .input{
   border-bottom: 1px solid purple;
   border-top: 0;
@@ -34,21 +29,6 @@
 
 #submit{
   width: 200px;
-  margin-top: 50px;
-}
-
-#contenedor{
-  width: 500px;
-  height: 500px;
-  background-color: blueviolet;
-  margin-left: 400px;
-  margin-top: 30px;
-}
-
-.img1{
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  margin-left: 130px;
   margin-top: 20px;
 }
+

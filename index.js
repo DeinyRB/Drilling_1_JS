@@ -12,7 +12,7 @@ const sobre_ti = document.getElementById("info");
 const form = document.getElementById("form");
 
 // Constante de contenedor del contenido inyectado con JS //
-const contenedor = document.getElementById("contenedor");
+const contenedor1 = document.getElementById("contenedor1");
 
 
 // Crear event listener para forma //
@@ -27,38 +27,56 @@ form.addEventListener('submit' , (e) => {
   const formulario = {
     name: nombre.value,
     email: correo.value,
-    texto: sobre_ti.value,
-    tel: telefono.value,
     labor: trabajo.value,
+    tel: telefono.value,
+    texto: sobre_ti.value,
   }
 
-  const { name, email, texto, tel, labor} = formulario;
+  const { name, email, labor, tel, texto} = formulario;
 
   console.log(formulario);
 
   // Llamar funcion para crear html 
-  const cuadroHtml = crearCuadroDeForma(name, email, texto, tel, labor);
+  const cuadroHtml = crearCuadroDeForma(name, email, labor, tel, texto);
 
-  contenedor.insertAdjacentHTML('beforeend', cuadroHtml);
+  contenedor1.insertAdjacentHTML('beforeend', cuadroHtml);
 
   // Dar la orden de submit
   // event.submit();
 
-})
+});
 
 
 // Crear una funcio que nos retorne contenido HTML dinamicamente //
 
-function crearCuadroDeForma(name, email, texto, tel, labor) {
-  const cuadroHtml = `
-  <div class="contenido">
-    <h2 class="contenido__titulo">${name}</h2>
-    <p class="contenido__p>${email}</p>
-    <p class="contenido__p>${texto}</p>
-    <p class="contenido__p>${tel}</p>
-    <p class="contenido__p>${labor}</p>
+function crearCuadroDeForma(name, email, labor, tel, texto) {
+  const sectionHtml = `
+  <div class="target">
+    <div id="cuadro">
+      <img class="img1" id="imagen" src="./img1.jpg" alt="" />
+      <h2 class="contenido__titulo">${name}</h2>
+      <p class="contenido__p">${labor}</p>
+    </div>
+
+    <div id="result">
+      <h3 class="hr">Información</h3>
+      <div id="orden-result">
+        <div class="pading">      
+          <h3>Email</h3>
+          <p class="contenido__p">${email}</p>
+        </div>  
+        <div class="pading">  
+          <h3>Phone</h3>
+          <p class="contenido__p">${tel}</p>
+        </div>  
+      </div>
+      <div class="pading">  
+        <h3 class="hr">Sobre mi</h3>
+        <p class="contenido__p">${texto}</p>
+      </div>  
+    </div>
   </div>
   ` 
 
-  return cuadroHtml;
+  return sectionHtml;
 }

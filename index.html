@@ -12,63 +12,65 @@
     <h1 id="titulo">INSCRIBETE</h1>
     <main class="main">
       <form id="form">
-        <section id="contenedor-1">
-          <label>Nombre</label>
-          <input
-            type="text"
-            name="Nombre"
-            id="nombre"
-            placeholder="Su nombre"
-            class="input"
-          />
+        <section id="contenedor">
+          <div>
+            <label>Nombre</label>
+            <input
+              type="text"
+              name="Nombre"
+              id="nombre"
+              placeholder="Su nombre"
+              class="input"
+            />
 
-          <label>correo</label>
-          <input
-            type="email"
-            name="Correo"
-            id="correo"
-            placeholder="Su correo"
-            class="input"
-          />
-        </section>
-        <section id="contenedor-2">
-          <label>Trabajo</label>
-          <input
-            type="text"
-            name="Trabajo"
-            id="trabajo"
-            placeholder="tipo de trabajo"
-            class="input"
-          />
+            <label>correo</label>
+            <input
+              type="email"
+              name="Correo"
+              id="correo"
+              placeholder="Su correo"
+              class="input"
+            />
+          </div>
 
-          <label>Telefono</label>
-          <input
-            type="number"
-            name="Telefono"
-            id="telefono"
-            placeholder="Su numero de telefono"
-            class="input"
-          />
+          <div>
+            <label>Trabajo</label>
+            <input
+              type="text"
+              name="Trabajo"
+              id="trabajo"
+              placeholder="tipo de trabajo"
+              class="input"
+            />
+
+            <label>Telefono</label>
+            <input
+              type="number"
+              name="Telefono"
+              id="telefono"
+              placeholder="Su numero de telefono"
+              class="input"
+            />
+          </div>
+
+          <div>
+            <label>Sobre ti</label>
+            <input
+              type="text"
+              name="informaciom"
+              id="info"
+              placeholder="informacion sobre usted"
+              class="input"
+            />
+            <button id="submit" type="submit">submit</button>
+          </div>
         </section>
-        <div id="info">
-          <label>Sobre ti</label>
-          <input
-            type="text"
-            name="informaciom"
-            id="informacion"
-            placeholder="informacion sobre usted"
-            class="input"
-          />
-          <button id="submit" type="submit">submit</button>
-        </div>
       </form>
+
+      <section id="contenedor1"></section>
     </main>
 
-    <footer>
-      <section id="contenedor">
-        <img class="img1" src="./img1.jpg" alt="" />
-      </section>
-    </footer>
+    <footer></footer>
 
     <script src="./index.js"></script>
   </body>
